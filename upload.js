@@ -21,7 +21,22 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         console.error('File input element not found.');
     }
-    uploadButton.addEventListener('click', uploadFilesAndGenerateManifest);
+    
+        // 检查文件输入并更新按钮状态的函数
+    function updateButtonState() {
+        if (fileInput.files.length > 0) {
+            uploadButton.disabled = false; // 有文件被选中，启用按钮
+            uploadButton.addEventListener('click', uploadFilesAndGenerateManifest);
+        } else {
+            uploadButton.disabled = true;  // 没有文件被选中，禁用按钮
+        }
+    }
+    
+    // 添加事件监听器来响应文件选择的变化
+    fileInput.addEventListener('change', updateButtonState);
+
+    // 页面加载时初始化按钮状态
+    updateButtonState();
     connectArConnect();
 });
 
