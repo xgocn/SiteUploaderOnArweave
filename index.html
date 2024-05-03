@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Directory to Arweave</title>
+    <script src="../web.bundle.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #e0eafc, #cfdef3);
+            margin: 0;
+            padding: 20px;
+            color: #555;
+        }
+    
+        .container{
+            width: 80%;
+            margin-left: 10%;
+        }
+    
+        h1 {
+            text-align: center;
+            color: #666;
+            font-size: 32px;
+        }
+    
+        button {
+            background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+            color: #555;
+            border: none;
+            padding: 12px 25px;
+            margin: 20px 0;
+            border-radius: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+    
+        button:hover {
+            background: linear-gradient(to bottom, #e5e5e5 0%, #ffffff 100%);
+            box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
+        }
+    
+        input[type="file"] {
+            border: 2px solid #ddd;
+            padding: 10px;
+            width: calc(100% - 22px);
+            border-radius: 20px;
+            margin: 10px 0;
+            background: rgba(255, 255, 255, 0.8);
+            transition: border-color 0.3s ease;
+        }
+    
+        input[type="file"]:hover {
+            border-color: #bbb;
+        }
+    
+        #fileList, #manifestData, #siteurl {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+    
+        #fileList h2, #manifestData h2, #siteurl h2 {
+            color: #666;
+            font-size: 18px;
+        }
+    
+        li {
+            list-style-type: none;
+            padding: 5px;
+            border-bottom: 1px solid #eee;
+        }
+    
+        a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+    
+        a:hover {
+            color: #333;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Directory to Arweave</h1>
+        <input type="file" id="fileInput" webkitdirectory directory multiple>
+        <button id="uploadButton">Upload Files and Generate Manifest</button>
+        <div id="fileList"><h2>Files List:</h2></div>
+        <div id="manifestData"><h2>Manifest:</h2></div>
+        <div id="siteurl"></div>
+        <script src="upload.js"></script>
+    <div>
+</body>
+</html>
