@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload Directory to Arweave</title>
     <script src="web.bundle.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        body {
+        html, body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(to right, #e0eafc, #cfdef3);
+            height: 100%; /* 确保整个页面高度充满整个视口 */
             margin: 0;
-            padding: 20px;
-            color: #555;
-            min-width: 345px;
+            display: flex;
+            flex-direction: column; /* 确保内容按顺序垂直排列 */
         }
-    
         .container{
             width: 80%;
             margin-left: 10%;
@@ -89,6 +89,36 @@
             color: #333;
             text-decoration: underline;
         }
+
+        .footer {
+            margin-top: auto; /* 将 footer 推到底部 */
+            width: 100%;
+        }
+        
+        .github-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .github-link a {
+            font-size: 24px;
+            color: #333;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .github-link a:hover {
+            color: #0366d6;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .github-link i {
+            margin-right: 8px;
+        }
+
     </style>
 </head>
 <body>
@@ -100,9 +130,16 @@
         <div id="manifestData"><h2>Manifest:</h2></div>
         <div id="siteurl"></div>
         <script src="upload.js"></script>
-        <div id="copyright"> ©FarMer </div>
+
         <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
         <script>LA.init({id:"22fNOvx7PHdcWdSq",ck:"22fNOvx7PHdcWdSq"})</script>
     <div>
+    <footer class="footer">
+        <div class="github-link">
+            <a href="https://github.com/xgocn/SiteUploaderOnArweave" target="_blank" title="Visit my GitHub Repository">
+                <i class="fab fa-github"></i> GitHub © FarMer 
+            </a>
+        </div>
+    </footer>
 </body>
 </html>
