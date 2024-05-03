@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
     
         // 检查文件输入并更新按钮状态的函数
     function updateButtonState() {
-        alert('AA');
         if (fileInput.files.length > 0) {
             uploadButton.disabled = false; // 有文件被选中，启用按钮
             uploadButton.addEventListener('click', uploadFilesAndGenerateManifest);
