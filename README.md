@@ -7,4 +7,4 @@ Independecies&Steps \
 3、publish this code to a your website;
 
 
-you can use https://arweave.net/raw/txid to see the path manifest itself
+you can use https://arweave.net/raw/txidofManifest to see the path manifest itself
